@@ -19,13 +19,16 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
     margin: 0;
+    width: 100%;
     min-height: 100vh;
     font-family: "Manrope", sans-serif;
     color: var(--ink);
+    overflow-x: hidden;
     background:
         radial-gradient(circle at top left, rgba(242, 181, 139, 0.28), transparent 32%),
         radial-gradient(circle at bottom right, rgba(47, 111, 106, 0.18), transparent 34%),
@@ -53,6 +56,7 @@ textarea {
     min-height: 100vh;
     overflow: hidden;
     padding: 1.5rem;
+    width: 100%;
 }
 
 .backdrop-orb {
@@ -90,12 +94,24 @@ textarea {
     background: rgba(255, 252, 247, 0.84);
     backdrop-filter: blur(16px);
     box-shadow: var(--shadow);
+    position: sticky;
+    top: 1rem;
+    width: 100%;
+}
+
+.topbar > *,
+.hero-panel > *,
+.auth-layout > *,
+.panel > *,
+.metric-card > * {
+    min-width: 0;
 }
 
 .brand {
     display: flex;
     align-items: center;
     gap: 0.9rem;
+    min-width: 0;
 }
 
 .brand strong {
@@ -129,9 +145,11 @@ textarea {
 }
 
 .primary-nav a {
+    flex: 0 0 auto;
     padding: 0.55rem 0.8rem;
     border-radius: 999px;
     color: var(--muted);
+    white-space: nowrap;
     transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
@@ -163,6 +181,9 @@ textarea {
 .ghost-button,
 .primary-button,
 .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 999px;
     cursor: pointer;
@@ -199,6 +220,7 @@ textarea {
     z-index: 1;
     max-width: 1180px;
     margin: 1.5rem auto 0;
+    width: min(100%, 1180px);
 }
 
 .hero-panel,
@@ -211,6 +233,8 @@ textarea {
     background: var(--panel);
     backdrop-filter: blur(14px);
     box-shadow: var(--shadow);
+    width: 100%;
+    min-width: 0;
 }
 
 .hero-panel {
@@ -228,6 +252,7 @@ textarea {
     font-family: "Fraunces", serif;
     font-weight: 600;
     letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
 }
 
 .hero-copy p,
@@ -235,6 +260,7 @@ textarea {
 .panel-subtle,
 .muted {
     color: var(--muted);
+    overflow-wrap: anywhere;
 }
 
 .eyebrow {
@@ -300,6 +326,7 @@ textarea {
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
     align-items: start;
+    width: 100%;
 }
 
 .auth-panel {
@@ -345,6 +372,7 @@ textarea {
 
 .panel-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
 }
 
 .span-4 { grid-column: span 4; }
@@ -393,6 +421,7 @@ textarea {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 1.15rem;
     padding: 1rem;
+    min-width: 0;
 }
 
 .entry strong,
@@ -444,6 +473,22 @@ textarea {
     background: rgba(255, 255, 255, 0.5);
 }
 
+.community-post p,
+.entry p,
+.recommendation p,
+.risk-flag p,
+.history-row p,
+.mini-card p,
+.badge-chip p {
+    overflow-wrap: anywhere;
+}
+
+.form-grid > .primary-button,
+.form-grid > .secondary-button,
+.form-grid > .ghost-button {
+    width: 100%;
+}
+
 .footer-note {
     margin-top: 1rem;
     font-size: 0.92rem;
@@ -456,7 +501,6 @@ textarea {
 }
 
 @media (max-width: 1000px) {
-    .topbar,
     .hero-panel,
     .auth-layout,
     .panel-grid {
@@ -465,11 +509,19 @@ textarea {
     }
 
     .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
         justify-items: stretch;
+        gap: 1rem;
     }
 
     .primary-nav {
         justify-content: flex-start;
+    }
+
+    .topbar-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .stats-grid,
@@ -490,7 +542,68 @@ textarea {
 
 @media (max-width: 720px) {
     .page-shell {
+        padding: 0.8rem;
+    }
+
+    .topbar {
+        top: 0.6rem;
+        padding: 0.9rem;
+        border-radius: 1.2rem;
+    }
+
+    .brand {
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .brand strong {
+        font-size: 1rem;
+    }
+
+    .brand small {
+        display: block;
+        font-size: 0.8rem;
+        line-height: 1.35;
+    }
+
+    .brand-mark {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0.8rem;
+        font-size: 0.92rem;
+    }
+
+    .primary-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem;
+        width: 100%;
+    }
+
+    .primary-nav a {
+        width: 100%;
+        padding: 0.6rem 0.85rem;
+        text-align: center;
+    }
+
+    .app-frame {
+        margin-top: 1rem;
+    }
+
+    .hero-panel,
+    .auth-panel,
+    .panel,
+    .metric-card {
         padding: 1rem;
+        border-radius: 1.2rem;
+    }
+
+    .hero-copy h1,
+    .section-heading h2,
+    .panel h2,
+    .auth-panel h1 {
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.08;
     }
 
     .grid-2,
@@ -500,6 +613,89 @@ textarea {
 
     .topbar-actions {
         width: 100%;
-        justify-content: space-between;
+        justify-content: stretch;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .session-pill,
+    .metric-pill {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ghost-button,
+    .primary-button,
+    .secondary-button {
+        min-height: 2.9rem;
+    }
+
+    .panel-header,
+    .list-header,
+    .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inline-actions,
+    .action-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inline-actions > *,
+    .action-row > * {
+        width: 100%;
+    }
+
+    .community-post,
+    .entry,
+    .mini-card,
+    .recommendation,
+    .risk-flag,
+    .badge-chip,
+    .history-row {
+        padding: 0.9rem;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+        padding: 0.78rem 0.9rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .page-shell {
+        padding: 0.65rem;
+    }
+
+    .backdrop-orb {
+        width: 20rem;
+        height: 20rem;
+        opacity: 0.5;
+    }
+
+    .hero-panel,
+    .auth-panel,
+    .panel,
+    .metric-card {
+        padding: 0.9rem;
+    }
+
+    .metric-card strong {
+        font-size: 1.55rem;
+    }
+
+    .eyebrow {
+        letter-spacing: 0.1em;
+        font-size: 0.68rem;
+    }
+
+    .status-message,
+    .empty-state,
+    .support-banner {
+        padding: 0.85rem;
     }
 }
