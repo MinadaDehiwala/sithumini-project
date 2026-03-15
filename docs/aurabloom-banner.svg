@@ -1,0 +1,56 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="70" x2="1160" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F2EA"/>
+      <stop offset="0.45" stop-color="#DCEBDD"/>
+      <stop offset="1" stop-color="#C7D7F4"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="520" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="1" stop-color="#F6FBF5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D76B4D"/>
+      <stop offset="1" stop-color="#D99C57"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1280" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#7E8AA8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
+
+  <circle cx="1104" cy="118" r="90" fill="#F3C67A" fill-opacity="0.42"/>
+  <circle cx="151" cy="114" r="58" fill="#D98A73" fill-opacity="0.30"/>
+  <circle cx="1165" cy="513" r="126" fill="#9AB7D7" fill-opacity="0.18"/>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="88" width="1108" height="464" rx="32" fill="#F7F5EF" fill-opacity="0.84"/>
+  </g>
+
+  <rect x="130" y="132" width="488" height="376" rx="28" fill="#18332C"/>
+  <circle cx="210" cy="206" r="35" fill="url(#accent)"/>
+  <path d="M201 202C201 192.611 208.611 185 218 185C227.389 185 235 192.611 235 202V208.267C235 220.27 225.27 230 213.267 230H208.733C204.462 230 201 226.538 201 222.267V202Z" fill="#FFF8F0"/>
+  <path d="M215.863 223.602C229.764 223.602 241.034 212.332 241.034 198.431C241.034 184.53 229.764 173.26 215.863 173.26C201.962 173.26 190.692 184.53 190.692 198.431C190.692 212.332 201.962 223.602 215.863 223.602Z" fill="#FFF8F0" fill-opacity="0.14"/>
+  <rect x="184" y="276" width="382" height="14" rx="7" fill="#EEF3EC" fill-opacity="0.95"/>
+  <rect x="184" y="312" width="330" height="14" rx="7" fill="#EEF3EC" fill-opacity="0.55"/>
+  <rect x="184" y="348" width="281" height="14" rx="7" fill="#EEF3EC" fill-opacity="0.40"/>
+
+  <rect x="676" y="132" width="470" height="196" rx="28" fill="url(#card)"/>
+  <text x="720" y="208" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700">AuraBloom</text>
+  <text x="720" y="256" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="25">Mental wellness platform with a Java 21 API</text>
+  <text x="720" y="290" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="25">and a handcrafted HTML, CSS, and JavaScript frontend.</text>
+
+  <rect x="676" y="360" width="214" height="108" rx="24" fill="#FFF7EC"/>
+  <text x="706" y="408" fill="#D76B4D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Frontend</text>
+  <text x="706" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Vanilla JS</text>
+  <text x="706" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Static UI served by Nginx</text>
+
+  <rect x="910" y="360" width="236" height="108" rx="24" fill="#EFF6F0"/>
+  <text x="940" y="408" fill="#2D6F5F" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Backend</text>
+  <text x="940" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Java 21</text>
+  <text x="940" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Spring Boot plus MySQL 8</text>
+
+  <rect x="676" y="494" width="470" height="18" rx="9" fill="#D8E6D9"/>
+  <rect x="676" y="494" width="324" height="18" rx="9" fill="url(#accent)"/>
+</svg>
