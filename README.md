@@ -65,15 +65,17 @@ This repository contains the production implementation of the AuraBloom proposal
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    A["Browser"] --> B["nginx"]
-    B --> C["Static frontend<br/>HTML + CSS + JS"]
-    B --> D["Spring Boot API<br/>Java 21"]
-    D --> E["MySQL 8"]
-    D --> F["Risk engine"]
-    D --> G["Admin + moderation"]
+```text
+Browser
+  -> nginx
+     -> /            Static frontend (HTML, CSS, JavaScript)
+     -> /api         Spring Boot API (Java 21)
+                        -> MySQL 8
+                        -> Risk scoring and insights
+                        -> Admin and moderation workflows
 ```
+
+This keeps the request flow explicit without relying on a wide Mermaid layout that can render awkwardly on GitHub.
 
 ## Repository Layout
 

@@ -36,21 +36,22 @@
   <rect x="184" y="312" width="330" height="14" rx="7" fill="#EEF3EC" fill-opacity="0.55"/>
   <rect x="184" y="348" width="281" height="14" rx="7" fill="#EEF3EC" fill-opacity="0.40"/>
 
-  <rect x="676" y="132" width="470" height="196" rx="28" fill="url(#card)"/>
-  <text x="720" y="208" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700">AuraBloom</text>
-  <text x="720" y="256" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="25">Mental wellness platform with a Java 21 API</text>
-  <text x="720" y="290" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="25">and a handcrafted HTML, CSS, and JavaScript frontend.</text>
+  <rect x="656" y="132" width="490" height="196" rx="28" fill="url(#card)"/>
+  <text x="700" y="206" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700">AuraBloom</text>
+  <text x="700" y="252" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="23">Mental wellness platform</text>
+  <text x="700" y="286" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="23">Java 21 Spring Boot API plus a static</text>
+  <text x="700" y="316" fill="#4E625C" font-family="Arial, Helvetica, sans-serif" font-size="23">HTML, CSS, and JavaScript frontend.</text>
 
-  <rect x="676" y="360" width="214" height="108" rx="24" fill="#FFF7EC"/>
-  <text x="706" y="408" fill="#D76B4D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Frontend</text>
-  <text x="706" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Vanilla JS</text>
-  <text x="706" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Static UI served by Nginx</text>
+  <rect x="656" y="360" width="224" height="108" rx="24" fill="#FFF7EC"/>
+  <text x="686" y="408" fill="#D76B4D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Frontend</text>
+  <text x="686" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">HTML + CSS + JS</text>
+  <text x="686" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Static UI served by nginx</text>
 
-  <rect x="910" y="360" width="236" height="108" rx="24" fill="#EFF6F0"/>
-  <text x="940" y="408" fill="#2D6F5F" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Backend</text>
-  <text x="940" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700">Java 21</text>
-  <text x="940" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Spring Boot plus MySQL 8</text>
+  <rect x="900" y="360" width="246" height="108" rx="24" fill="#EFF6F0"/>
+  <text x="930" y="408" fill="#2D6F5F" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Backend</text>
+  <text x="930" y="442" fill="#18332C" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Java 21 + MySQL</text>
+  <text x="930" y="465" fill="#5F6F69" font-family="Arial, Helvetica, sans-serif" font-size="18">Spring Boot API on ARM EC2</text>
 
-  <rect x="676" y="494" width="470" height="18" rx="9" fill="#D8E6D9"/>
-  <rect x="676" y="494" width="324" height="18" rx="9" fill="url(#accent)"/>
+  <rect x="656" y="494" width="490" height="18" rx="9" fill="#D8E6D9"/>
+  <rect x="656" y="494" width="338" height="18" rx="9" fill="url(#accent)"/>
 </svg>
