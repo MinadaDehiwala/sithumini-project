@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>AuraBloom</title>
+</head>
+<body>
+<div class="page-shell">
+    <div class="backdrop-orb backdrop-orb-left"></div>
+    <div class="backdrop-orb backdrop-orb-right"></div>
+
+    <header class="topbar">
+        <a class="brand" href="#dashboard">
+            <span class="brand-mark">AB</span>
+            <span>
+                <strong>AuraBloom</strong>
+                <small>Smart mental wellness platform</small>
+            </span>
+        </a>
+
+        <nav class="primary-nav" id="primary-nav">
+            <a href="#dashboard" data-route="dashboard">Dashboard</a>
+            <a href="#moods" data-route="moods">Moods</a>
+            <a href="#journals" data-route="journals">Journals</a>
+            <a href="#meditations" data-route="meditations">Meditations</a>
+            <a href="#challenges" data-route="challenges">Challenges</a>
+            <a href="#capsules" data-route="capsules">Capsules</a>
+            <a href="#community" data-route="community">Community</a>
+            <a href="#profile" data-route="profile">Profile</a>
+            <a href="#admin" data-route="admin" class="admin-only hidden">Admin</a>
+        </nav>
+
+        <div class="topbar-actions">
+            <span class="session-pill hidden" id="session-pill"></span>
+            <button class="ghost-button hidden" id="logout-button" type="button">Log out</button>
+        </div>
+    </header>
+
+    <main id="app" class="app-frame"></main>
+</div>
+
+<template id="loading-template">
+    <section class="hero-panel">
+        <div class="hero-copy">
+            <span class="eyebrow">Loading</span>
+            <h1>Gathering your wellness snapshot.</h1>
+            <p>We are pulling together moods, reflection signals, and your next best action.</p>
+        </div>
+        <div class="loading-grid">
+            <div class="loading-card"></div>
+            <div class="loading-card"></div>
+            <div class="loading-card"></div>
+        </div>
+    </section>
+</template>
+
+<script src="./app.js"></script>
+</body>
+</html>

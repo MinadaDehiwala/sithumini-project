@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+*.pem
+*.key
+*.crt
+.env
+.env.*
+
+SERVER_ACCESS_AND_CREDENTIALS.txt
+
+backend/target/
+frontend/node_modules/

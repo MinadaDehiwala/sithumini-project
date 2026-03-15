@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: aurabloom
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/aurabloom?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-to-a-very-long-secret-that-is-at-least-32-characters}
+    access-token-minutes: ${JWT_ACCESS_MINUTES:60}
+    refresh-token-days: ${JWT_REFRESH_DAYS:30}
+  cors:
+    allowed-origins:
+      - ${FRONTEND_URL:http://localhost:5173}
+  mail:
+    enabled: ${MAIL_ENABLED:false}
+  bootstrap:
+    create-default-admin: ${BOOTSTRAP_ADMIN:true}
+    admin-email: ${BOOTSTRAP_ADMIN_EMAIL:admin@aurabloom.local}
+    admin-password: ${BOOTSTRAP_ADMIN_PASSWORD:Admin123!}
+    admin-name: ${BOOTSTRAP_ADMIN_NAME:AuraBloom Admin}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
