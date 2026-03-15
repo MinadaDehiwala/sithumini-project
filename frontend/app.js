@@ -172,11 +172,11 @@ function renderAuth() {
                 <form class="form-grid" data-form="login">
                     <div class="field">
                         <label>Email</label>
-                        <input name="email" type="email" placeholder="name@example.com" required>
+                        <input name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
                     </div>
                     <div class="field">
                         <label>Password</label>
-                        <input name="password" type="password" placeholder="At least 8 characters" required>
+                        <input name="password" type="password" placeholder="At least 8 characters" autocomplete="current-password" required>
                     </div>
                     <button class="primary-button" type="submit">Sign in</button>
                 </form>
@@ -188,15 +188,15 @@ function renderAuth() {
                 <form class="form-grid" data-form="register">
                     <div class="field">
                         <label>Full name</label>
-                        <input name="fullName" type="text" placeholder="Your name" required>
+                        <input name="fullName" type="text" placeholder="Your name" autocomplete="name" required>
                     </div>
                     <div class="field">
                         <label>Email</label>
-                        <input name="email" type="email" placeholder="name@example.com" required>
+                        <input name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
                     </div>
                     <div class="field">
                         <label>Password</label>
-                        <input name="password" type="password" placeholder="At least 8 characters" required>
+                        <input name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required>
                     </div>
                     <button class="secondary-button" type="submit">Create account</button>
                 </form>
@@ -373,7 +373,7 @@ function renderMoods() {
                         </div>
                         <div class="field">
                             <label>Date</label>
-                            <input name="entryDate" type="date">
+                            <input name="entryDate" type="date" autocomplete="off">
                         </div>
                     </div>
                     <div class="field">
@@ -436,7 +436,7 @@ function renderJournals() {
                 <form class="form-grid" data-form="journal">
                     <div class="field">
                         <label>Title</label>
-                        <input name="title" type="text" placeholder="A short headline for today" required>
+                        <input name="title" type="text" placeholder="A short headline for today" autocomplete="off" required>
                     </div>
                     <div class="field">
                         <label>Body</label>
@@ -444,7 +444,7 @@ function renderJournals() {
                     </div>
                     <div class="field">
                         <label>Date</label>
-                        <input name="entryDate" type="date">
+                        <input name="entryDate" type="date" autocomplete="off">
                     </div>
                     <button class="primary-button" type="submit">Save reflection</button>
                 </form>
@@ -491,11 +491,11 @@ function renderMeditations() {
                     <div class="grid-2">
                         <div class="field">
                             <label>Minutes</label>
-                            <input name="minutes" type="number" min="1" max="240" value="10" required>
+                            <input name="minutes" type="number" min="1" max="240" value="10" autocomplete="off" required>
                         </div>
                         <div class="field">
                             <label>Completed at</label>
-                            <input name="completedAt" type="datetime-local">
+                            <input name="completedAt" type="datetime-local" autocomplete="off">
                         </div>
                     </div>
                     <div class="field">
@@ -593,7 +593,7 @@ function renderCapsules() {
                 <form class="form-grid" data-form="capsule">
                     <div class="field">
                         <label>Title</label>
-                        <input name="title" type="text" placeholder="A note for later" required>
+                        <input name="title" type="text" placeholder="A note for later" autocomplete="off" required>
                     </div>
                     <div class="field">
                         <label>Message</label>
@@ -601,7 +601,7 @@ function renderCapsules() {
                     </div>
                     <div class="field">
                         <label>Unlock at</label>
-                        <input name="unlockAt" type="datetime-local" required>
+                        <input name="unlockAt" type="datetime-local" autocomplete="off" required>
                     </div>
                     <button class="primary-button" type="submit">Save capsule</button>
                 </form>
@@ -709,11 +709,11 @@ function renderProfile() {
                 <form class="form-grid" data-form="profile">
                     <div class="field">
                         <label>Full name</label>
-                        <input name="fullName" type="text" value="${escapeAttribute(user.fullName)}" required>
+                        <input name="fullName" type="text" value="${escapeAttribute(user.fullName)}" autocomplete="name" required>
                     </div>
                     <div class="field">
                         <label>New password</label>
-                        <input name="password" type="password" placeholder="Leave blank to keep current password">
+                        <input name="password" type="password" placeholder="Leave blank to keep current password" autocomplete="new-password">
                     </div>
                     <button class="primary-button" type="submit">Save profile</button>
                 </form>
@@ -817,7 +817,7 @@ function renderAdmin() {
                     <div class="grid-2">
                         <div class="field">
                             <label>Title</label>
-                            <input name="title" type="text" required>
+                            <input name="title" type="text" autocomplete="off" required>
                         </div>
                         <div class="field">
                             <label>Category</label>
